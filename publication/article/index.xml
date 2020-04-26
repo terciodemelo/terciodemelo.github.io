@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>article on Tercio de Melo</title>
-    <link>tercio.com.br/publication/article/</link>
+    <link>/publication/article/</link>
     <description>Recent content in article on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="tercio.com.br/publication/article/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/publication/article/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Good Title</title>
-        <link>tercio.com.br/publication/article/article_any_folder_name_1/</link>
+        <link>/publication/article/article_any_folder_name_1/</link>
         <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Fri, 01 Jun 2018 00:00:00 +0000</atom:modified>
-        <guid>tercio.com.br/publication/article/article_any_folder_name_1/</guid>
+        <guid>/publication/article/article_any_folder_name_1/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>

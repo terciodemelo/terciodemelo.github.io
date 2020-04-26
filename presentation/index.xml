@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Presentations on Tercio de Melo</title>
-    <link>tercio.com.br/presentation/</link>
+    <link>/presentation/</link>
     <description>Recent content in Presentations on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 30 Oct 2019 20:48:10 +0900</lastBuildDate>
     
-        <atom:link href="tercio.com.br/presentation/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/presentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>Fourth</title>
-        <link>tercio.com.br/presentation/dir/fourth/</link>
+        <link>/presentation/dir/fourth/</link>
         <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Wed, 30 Oct 2019 20:48:10 +0900</atom:modified>
-        <guid>tercio.com.br/presentation/dir/fourth/</guid>
+        <guid>/presentation/dir/fourth/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
-        <media:content url="tercio.com.brimages/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="images/feature1/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -54,15 +54,15 @@
       
       <item>
         <title>Third</title>
-        <link>tercio.com.br/presentation/third/</link>
+        <link>/presentation/third/</link>
         <pubDate>Wed, 30 Oct 2019 20:46:30 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Wed, 30 Oct 2019 20:46:30 +0900</atom:modified>
-        <guid>tercio.com.br/presentation/third/</guid>
+        <guid>/presentation/third/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
-        <media:content url="tercio.com.brimages/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="images/feature1/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -84,15 +84,15 @@
       
       <item>
         <title>Second</title>
-        <link>tercio.com.br/presentation/second/</link>
+        <link>/presentation/second/</link>
         <pubDate>Wed, 30 Oct 2019 20:45:24 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Wed, 30 Oct 2019 20:45:24 +0900</atom:modified>
-        <guid>tercio.com.br/presentation/second/</guid>
+        <guid>/presentation/second/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
-        <media:content url="tercio.com.brimages/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="images/feature1/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -114,15 +114,15 @@
       
       <item>
         <title>First</title>
-        <link>tercio.com.br/presentation/first/</link>
+        <link>/presentation/first/</link>
         <pubDate>Wed, 30 Oct 2019 19:45:20 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Wed, 30 Oct 2019 19:45:20 +0900</atom:modified>
-        <guid>tercio.com.br/presentation/first/</guid>
+        <guid>/presentation/first/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
-        <media:content url="tercio.com.brimages/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="images/feature1/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

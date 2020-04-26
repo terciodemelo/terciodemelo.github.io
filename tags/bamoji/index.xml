@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>bamoji on Tercio de Melo</title>
-    <link>tercio.com.br/tags/bamoji/</link>
+    <link>/tags/bamoji/</link>
     <description>Recent content in bamoji on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="tercio.com.br/tags/bamoji/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/bamoji/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Emoji Support</title>
-        <link>tercio.com.br/posts/emoji-support/</link>
+        <link>/posts/emoji-support/</link>
         <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Mon, 16 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>tercio.com.br/posts/emoji-support/</guid>
+        <guid>/posts/emoji-support/</guid>
         <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
         
         <dc:creator>Kim</dc:creator>

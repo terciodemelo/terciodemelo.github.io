@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Publications on Tercio de Melo</title>
-    <link>tercio.com.br/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="tercio.com.br/publication/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>article</title>
-        <link>tercio.com.br/publication/article/</link>
+        <link>/publication/article/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>tercio.com.br/publication/article/</guid>
+        <guid>/publication/article/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>book</title>
-        <link>tercio.com.br/publication/book/</link>
+        <link>/publication/book/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>tercio.com.br/publication/book/</guid>
+        <guid>/publication/book/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>misc</title>
-        <link>tercio.com.br/publication/misc/</link>
+        <link>/publication/misc/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>tercio.com.br/publication/misc/</guid>
+        <guid>/publication/misc/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
