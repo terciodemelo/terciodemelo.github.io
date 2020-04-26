@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Tercio de Melo</title>
-    <link>http://example.org/series/</link>
+    <link>tercio.com.br/series/</link>
     <description>Recent content in Series on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="tercio.com.br/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Themes Guide</title>
-        <link>http://example.org/series/themes-guide/</link>
+        <link>tercio.com.br/series/themes-guide/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         
-        <guid>http://example.org/series/themes-guide/</guid>
+        <guid>tercio.com.br/series/themes-guide/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>

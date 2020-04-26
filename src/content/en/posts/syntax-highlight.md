@@ -82,7 +82,7 @@ hellomake: hellomake.o hellofunc.o
 ``` markdown
 **bold** 
 *italics* 
-[link](www.example.com)
+[link](tercio.com.br)
 ```
 
 ### JavaScript

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Hugo on Tercio de Melo</title>
-    <link>http://example.org/showcase/hugo/</link>
+    <link>tercio.com.br/showcase/hugo/</link>
     <description>Recent content in Hugo on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 19 Jan 2020 21:04:11 +0900</lastBuildDate>
     
-        <atom:link href="http://example.org/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="tercio.com.br/showcase/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Hugo Zzo Theme</title>
-        <link>http://example.org/showcase/hugo/hugo-theme-zzo/</link>
+        <link>tercio.com.br/showcase/hugo/hugo-theme-zzo/</link>
         <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>http://example.org/showcase/hugo/hugo-theme-zzo/</guid>
+        <guid>tercio.com.br/showcase/hugo/hugo-theme-zzo/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>Hugo zDoc Theme</title>
-        <link>http://example.org/showcase/hugo/hugo-theme-zdoc/</link>
+        <link>tercio.com.br/showcase/hugo/hugo-theme-zdoc/</link>
         <pubDate>Sun, 19 Jan 2020 21:13:42 +0900</pubDate>
         <author>contact@tercio.com.br (Tercio de Melo)</author>
         <atom:modified>Sun, 19 Jan 2020 21:13:42 +0900</atom:modified>
-        <guid>http://example.org/showcase/hugo/hugo-theme-zdoc/</guid>
+        <guid>tercio.com.br/showcase/hugo/hugo-theme-zdoc/</guid>
         <description></description>
         
         <dc:creator>Tercio de Melo</dc:creator>
