@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on Tercio de Melo</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on Tercio de Melo</description>
+    <title>announcement on Tercio de Melo</title>
+    <link>/tags/announcement/</link>
+    <description>Recent content in announcement on Tercio de Melo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>contact@tercio.com.br (Tercio de Melo)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 22:50:03 +0000</lastBuildDate>
     
-        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
     
     
     
