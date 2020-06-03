@@ -14,13 +14,85 @@
     <managingEditor>contact@tercio.com.br (Tercio de Melo)</managingEditor>
     <webMaster>contact@tercio.com.br (Tercio de Melo)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 27 Apr 2020 22:50:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>development</title>
+        <link>/tags/development/</link>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+        <author>contact@tercio.com.br (Tercio de Melo)</author>
+        
+        <guid>/tags/development/</guid>
+        <description></description>
+        
+        <dc:creator>Tercio de Melo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>diagrams</title>
+        <link>/tags/diagrams/</link>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+        <author>contact@tercio.com.br (Tercio de Melo)</author>
+        
+        <guid>/tags/diagrams/</guid>
+        <description></description>
+        
+        <dc:creator>Tercio de Melo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>docker</title>
+        <link>/tags/docker/</link>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+        <author>contact@tercio.com.br (Tercio de Melo)</author>
+        
+        <guid>/tags/docker/</guid>
+        <description></description>
+        
+        <dc:creator>Tercio de Melo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>documentation</title>
+        <link>/tags/documentation/</link>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+        <author>contact@tercio.com.br (Tercio de Melo)</author>
+        
+        <guid>/tags/documentation/</guid>
+        <description></description>
+        
+        <dc:creator>Tercio de Melo</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>announcement</title>
