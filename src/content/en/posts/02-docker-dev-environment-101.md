@@ -1,8 +1,8 @@
 ---
 title: Docker development environment 101
 description: >-
-    I'm here to talk about the very basics of building a development environment in Docker
-    using my personal Diagrams template as example
+    Let's talk about the very basics of building a development environment in Docker
+    using software Diagrams template as example
 date: 2020-06-03
 tags:
 - docker
