@@ -4,7 +4,7 @@
 
 (defn -main [& args]
   (println (html [:head
-                  :link {:rel "stylesheet" :href "index.css"}]
+                  [:link {:rel "stylesheet" :href "index.css"}]]
                  [:body
                   [:p "New website is comming along"]]
                  [:footer
