@@ -38,9 +38,9 @@
         
         [:p
          "The " [:code "&lt;meta ...&gt;"] " tag triggers refresh every too second. "
-         "And every time I save a file file, like "
+         "And every time I save a file, say "
          [:code "src/pages/index.clj"]
-         " in "
+         ", in "
          [:a {:href "https://www.gnu.org/software/emacs/"} "Emacs"]
          " then "
          [:a {:href "https://github.com/clojure-emacs/cider"} "CIDER"]
