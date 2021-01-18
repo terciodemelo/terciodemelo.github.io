@@ -52,7 +52,7 @@
 
     [:p
      "Who already had some contact with "
-     [:a {:href "ClojureScript"}]
+     [:a {:href "https://clojurescript.org/"} "ClojureScript"]
      " might have noticed that I leverage "
      [:a {:href "https://github.com/weavejester/hiccup"} "Hiccup"]
      " to generate HTML from Clojure data structures. It is a really fun and"
