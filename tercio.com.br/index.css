@@ -1,3 +1,48 @@
-body {
+:root {
+    --body-font-color: #566b78;
+    --title-color: #333;
+    --code-background-color: #f5f7f9;
+    --code-border-bottom-color: #d8dee9;
+    --code-font-color: #a7adba;
+    --pre-border-left-color: #69c;
+    --link-color: #e81c4f;
     
+}
+
+body {
+    color: var(--body-font-color);
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: DejaVu Sans Mono, monospace;
+    line-height: 1.5;
+    padding: 4em 1em;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1, h2, strong {
+    color: var(--title-color);
+}
+
+code, pre {
+    background: var(--code-background-color);
+    border-bottom: 1px solid var(--code-border-bottom-color);
+    color: var(--code-font-color);
+}
+
+code {
+    padding: 2px px;
+    vertical-align: text-bottom;
+}
+
+pre {
+    padding: 1em;
+    border-left: 2px solid var(--pre-border-left-color);
+}
+
+a {
+    color: var(--link-color);
 }
