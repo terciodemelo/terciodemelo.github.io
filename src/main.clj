@@ -2,7 +2,10 @@
   (:gen-class)
   (:use [hiccup.core])
   (:require [clojure.java.io :as io]
-            [clojure.string :as string]))
+            [clojure.core.async :refer [go]]
+            [juxt.dirwatch :refer [watch-dir]]
+            [clojure.string :as string]
+            [dev.server]))
 
 (defn head [should-refresh]
   [:head
@@ -34,16 +37,20 @@
           is-dev-env  (contains? sysargs "--environment=dev")]
       (println "Generating " output-file)
       (with-open [wtr (io/writer output-file)]
-        (binding [*out* wtr]
-          (println (html (head is-dev-env)
-                         [:body (body page)]
-                         (footer))))))))
+        (.write wtr (html (head is-dev-env)
+                          [:body (body page)]
+                          (footer)))))))
 
-(let [class-path (System/getProperty "java.class.path")]
-  (if (.contains class-path "/cider-nrepl/")
-    (do
-      (println "Watching page changes")
-      (require '[juxt.dirwatch :refer [watch-dir]])
-      ((resolve 'watch-dir)
-       (fn [& _] (-main "--environment=dev"))
-       (io/file "src/pages")))))
+(defn watch-in-cider []
+  (let [class-path (System/getProperty "java.class.path")]
+    (if (.contains class-path "/cider-nrepl/")
+      (do
+        (println "Starting dev server on port 8000")
+        (go (dev.server/start 8000))
+        
+        (println "Watching page changes")
+        (watch-dir
+         (fn [& _] (-main "--environment=dev"))
+         (io/file "src/pages"))))))
+
+(comment (watch-in-cider))

@@ -13,5 +13,5 @@
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
-  :aliases {"dev-server" ["run" "-m" "dev.server/start"]}
+  :aliases {"dev-server" ["run" "-m" "dev.server/start" "--" "8000"]}
   :resource-paths ["tercio.com.br"])

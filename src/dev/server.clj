@@ -10,13 +10,13 @@
   (route/expand-routes
    #{["/" :get redirect-to-index :route-name :index-slash]}))
 
-(defn create-server []
+(defn create-server [port]
   (http/create-server
    {::http/type          :jetty
     ::http/resource-path ""
     ::http/routes        routes
-    ::http/port          8000}))
+    ::http/port          port}))
 
-(defn start []
-  (println "Serving at port 8000")
-  (http/start (create-server)))
+(defn start [port]
+  (println (str "Serving pages at port " port))
+  (http/start (create-server (Integer/parseInt (str port)))))
