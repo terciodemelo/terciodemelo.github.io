@@ -70,10 +70,9 @@
     (binding [*out* wtr]
       (println (html [:head
                       [:link {:rel "stylesheet" :href (str "index.css?" (rand 1000))}]
-                      [:meta {:http-equiv "refresh"  :content "2"}]]
+                      (comment [:meta {:http-equiv "refresh"  :content "2"}])]
                      [:body (body)]
                      [:footer
                       [:span "2018-2021"]])))))
 
-
-(-main)
+(comment (-main))
