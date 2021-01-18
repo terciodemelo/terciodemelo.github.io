@@ -10,6 +10,7 @@
 (defn head [should-refresh]
   [:head
    [:link {:rel "stylesheet" :href (str "index.css?" (rand 1000))}]
+   [:title "Tercio de Melo"]
    (if should-refresh
      [:meta {:http-equiv "refresh"  :content "2"}])])
 
@@ -37,9 +38,9 @@
           is-dev-env  (contains? sysargs "--environment=dev")]
       (println "Generating " output-file)
       (with-open [wtr (io/writer output-file)]
-        (.write wtr (html (head is-dev-env)
-                          [:body (body page)]
-                          (footer)))))))
+        (.write wtr (html [:html (head is-dev-env)
+                           [:body (body page)]
+                           (footer)]))))))
 
 (defn watch-in-cider []
   (let [class-path (System/getProperty "java.class.path")]
@@ -47,10 +48,13 @@
       (do
         (println "Starting dev server on port 8000")
         (go (dev.server/start 8000))
-        
+
         (println "Watching page changes")
         (watch-dir
          (fn [& _] (-main "--environment=dev"))
          (io/file "src/pages"))))))
 
 (comment (watch-in-cider))
+(comment (-main))
+(comment (-main "--environment=dev"))
+(comment (dev.server/start 8000))
