@@ -6,15 +6,20 @@
     --code-font-color: #a7adba;
     --pre-border-left-color: #69c;
     --link-color: #e81c4f;
+
+    --gradient-color-1: ivory;
+    --gradient-color-2: #873e23;
+    --gradient-size: 50em;
 }
 
 body {
+    background-color: var(--body-background-color);
     color: var(--body-font-color);
-    margin: 0 auto;
-    max-width: 50em;
     font-family: DejaVu Sans Mono, monospace;
     line-height: 1.5;
-    padding: 4em 1em;
+    max-width: 80ch;
+    padding: 4em 1em 4em 1em;
+    margin:  0 auto 0 auto;
 }
 
 h2 {
