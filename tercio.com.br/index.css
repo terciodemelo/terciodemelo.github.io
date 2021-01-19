@@ -35,6 +35,7 @@ body {
 		     var(--checker-size) var(--checker-size);
     background-position: top left, top left;
     min-height: 100%;
+    background-attachment: fixed;
 }
 
 .layer-2 {
