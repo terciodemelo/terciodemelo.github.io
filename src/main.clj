@@ -42,7 +42,10 @@
       (println "Generating " output-file)
       (with-open [wtr (io/writer output-file)]
         (.write wtr (html [:html (head is-dev-env)
-                           [:body (body page)]
+                           [:body [:div.layer.layer-1
+                                   [:div.layer.layer-2
+                                    [:div.content
+                                     (body page)]]]]
                            (footer)]))))))
 
 (defn watch-in-cider []
