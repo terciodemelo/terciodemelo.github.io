@@ -7,19 +7,49 @@
     --pre-border-left-color: #69c;
     --link-color: #e81c4f;
 
-    --gradient-color-1: ivory;
-    --gradient-color-2: #873e23;
-    --gradient-size: 50em;
+    --checker-color: #eaeaea;
+    --checker-size: 25em;
+}
+
+html {
+    background: linear-gradient(45deg,
+				var(--checker-color) 25%, transparent 25%,
+				transparent 75%, var(--checker-color) 75%),
+		linear-gradient(135deg,
+                                var(--checker-color) 25%, transparent 25%,
+				transparent 75%, var(--checker-color) 75%);
+		
+    background-size: var(--checker-size) var(--checker-size),
+		     var(--checker-size) var(--checker-size);
+    background-position: top left, top left;
 }
 
 body {
-    background-color: var(--body-background-color);
     color: var(--body-font-color);
+    background-color: white;
     font-family: DejaVu Sans Mono, monospace;
     line-height: 1.5;
     max-width: 80ch;
-    padding: 4em 1em 4em 1em;
-    margin:  0 auto 0 auto;
+    padding: 1em 1em 4em 1em;
+    margin:  3em auto 0 auto;
+    border-radius: 3px;
+}
+
+.header > h1 {
+    margin: 0.5em auto 0em auto;
+    width: max-content;
+}
+
+.header > nav {
+    margin: auto;
+    display: grid;
+    width: max-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em;
+}
+
+.header > nav > .current-page {
+    text-decoration: underline;
 }
 
 h2 {
@@ -45,8 +75,10 @@ code {
 pre {
     padding: 1em;
     border-left: 2px solid var(--pre-border-left-color);
+    border-radius: 3px;
 }
 
 a {
     color: var(--link-color);
+    text-decoration: none;
 }
