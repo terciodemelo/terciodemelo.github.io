@@ -5,7 +5,8 @@
             [clojure.core.async :refer [go]]
             [juxt.dirwatch :refer [watch-dir]]
             [clojure.string :as string]
-            [dev.server]))
+            [dev.server]
+            [components.components :as components]))
 
 (defn head [should-refresh]
   [:head
@@ -18,7 +19,9 @@
   (let [module  (symbol (str "pages." page))
         content (symbol (str module "/content"))]
     (require module)
-    [:body ((resolve content))]))
+    [:body
+     (components/header page)
+     ((resolve content))]))
 
 (defn footer []
   [:footer
@@ -52,7 +55,9 @@
         (println "Watching page changes")
         (watch-dir
          (fn [& _] (-main "--environment=dev"))
-         (io/file "src/pages"))))))
+         (io/file "src/pages")
+         (io/file "src/components")
+         (io/file "src/posts"))))))
 
 (comment (watch-in-cider))
 (comment (-main))

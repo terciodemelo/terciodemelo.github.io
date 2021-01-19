@@ -1,9 +1,7 @@
 (ns pages.index)
 
 (defn content []
-  (list [:h1 "Tercio de Melo"]
-        
-        [:h2 "New website!"]
+  (list [:h2 "New website!"]
         
         [:p "New website is coming along!!"]
         [:p "We now even have multiple paragraphs..."]

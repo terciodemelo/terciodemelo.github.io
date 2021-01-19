@@ -1,11 +1,12 @@
-<html><head><link href="index.css?852.9321957997211" rel="stylesheet" /><title>Tercio de Melo</title></head><body><body><h1>Tercio de Melo</h1><h2>New website!</h2><p>New website is coming along!!</p><p>We now even have multiple paragraphs...</p><h2>No JavaScript</h2><p>This website is made without any javascript.</p><p>Though the website itself is HTML and CSS only, it is generated from clojure code. I have previously used <a href="https://gohugo.io/">Hugo</a> to generate static website, but it is too cumbersome. I wanted something simple, but with powerful features such as hot reloading and custom logic for building the pages.</p><h2>Clojure for the rescue</h2><p>Of course a <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a> would be the best tool for the job, code and data is the same, for being a homoiconic language; and <a href="https://clojure.org/">Clojure</a> is currently my flavor of Lisp.</p><p>Below is a snippet of the clojure code that for now generates this <code>index.html</code> file:</p><pre>(ns main
+<html><head><link href="index.css?838.653140433467" rel="stylesheet" /><title>Tercio de Melo</title></head><body><body><div class="header"><h1>Tercio de Melo</h1><nav><a class="current-page" href="/index.html">HOME</a><a href="/about.html">ABOUT</a><a href="/posts.html">POSTS</a><a href="/tags.html">TAGS</a></nav></div><h2>New website!</h2><p>New website is coming along!!</p><p>We now even have multiple paragraphs...</p><h2>No JavaScript</h2><p>This website is made without any javascript.</p><p>Though the website itself is HTML and CSS only, it is generated from clojure code. I have previously used <a href="https://gohugo.io/">Hugo</a> to generate static website, but it is too cumbersome. I wanted something simple, but with powerful features such as hot reloading and custom logic for building the pages.</p><h2>Clojure for the rescue</h2><p>Of course a <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a> would be the best tool for the job, code and data is the same, for being a homoiconic language; and <a href="https://clojure.org/">Clojure</a> is currently my flavor of Lisp.</p><p>Below is a snippet of the clojure code that for now generates this <code>index.html</code> file:</p><pre>(ns main
   (:gen-class)
   (:use [hiccup.core])
   (:require [clojure.java.io :as io]
             [clojure.core.async :refer [go]]
             [juxt.dirwatch :refer [watch-dir]]
             [clojure.string :as string]
-            [dev.server]))
+            [dev.server]
+            [components.components :as components]))
 
 (defn head [should-refresh]
   [:head
@@ -18,7 +19,9 @@
   (let [module  (symbol (str "pages." page))
         content (symbol (str module "/content"))]
     (require module)
-    [:body ((resolve content))]))
+    [:body
+     (components/header page)
+     ((resolve content))]))
 
 (defn footer []
   [:footer
@@ -52,7 +55,9 @@
         (println "Watching page changes")
         (watch-dir
          (fn [& _] (-main "--environment=dev"))
-         (io/file "src/pages"))))))
+         (io/file "src/pages")
+         (io/file "src/components")
+         (io/file "src/posts"))))))
 
 (comment (watch-in-cider))
 (comment (-main))
