@@ -57,7 +57,11 @@ body {
 @media only screen and (max-width: 110ch) {
     .content {
 	margin: 0;
-	width: 100%
+	width: 100%;
+    }
+
+    .layer-2 {
+	padding: 0 0 0 0;
     }
 }
 
