@@ -23,10 +23,6 @@
      (components/header page)
      ((resolve content))]))
 
-(defn footer []
-  [:footer
-   [:span "2018-2021"]])
-
 (defn pages [base-dir]
   (let [directory (io/file (str base-dir "/src/pages"))]
     (->> (.list directory)
@@ -42,11 +38,7 @@
       (println "Generating " output-file)
       (with-open [wtr (io/writer output-file)]
         (.write wtr (html [:html (head is-dev-env)
-                           [:body [:div.layer.layer-1
-                                   [:div.layer.layer-2
-                                    [:div.content
-                                     (body page)]]]]
-                           (footer)]))))))
+                           [:body (body page)]]))))))
 
 (defn watch-in-cider []
   (let [class-path (System/getProperty "java.class.path")]
