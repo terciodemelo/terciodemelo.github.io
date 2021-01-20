@@ -29,6 +29,14 @@ body {
     .layer-2 {
 	padding: 0 0 0 0;
     }
+
+    .header {
+	font-size: 200%
+    }
+    
+    .header > nav {
+	grid-column-gap: 1.5em;
+    }
 }
 
 .header > h1 {
