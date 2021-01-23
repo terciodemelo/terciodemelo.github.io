@@ -17,7 +17,6 @@
      (cond
        (contains? reserved-symbols-1 content) [type-name {:reserved "1"} content]
        (contains? reserved-symbols-2 content) [type-name {:reserved "2"} content]
-       (contains? reserved-symbols-3 content) [type-name {:reserved "3"} content]
        :else                                  [type-name content])
      [type-name content])))
 
