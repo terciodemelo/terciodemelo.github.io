@@ -5,7 +5,8 @@
     --code-border-bottom-color: #d8dee9;
     --code-font-color: #a7adba;
     --pre-border-left-color: #69c;
-    --link-color: #e81c4f;
+    --link-color: rgb(2, 155, 247);
+    --nav-link-color: #e81c4f;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
     min-height: 80%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 100ch) {
     .content {
 	margin: 0;
 	width: 100%;
@@ -31,7 +32,7 @@ body {
     }
 
     .header {
-	font-size: 200%
+	font-size: 200%;
     }
     
     .header > nav {
@@ -65,24 +66,78 @@ h1, h2, strong {
     color: var(--title-color);
 }
 
-code, pre {
-    background: var(--code-background-color);
-    border-bottom: 1px solid var(--code-border-bottom-color);
-    color: var(--code-font-color);
+p {
+    text-align: justify;
 }
 
 code {
-    padding: 2px px;
-    vertical-align: text-bottom;
-}
-
-pre {
-    padding: 1em;
-    border-left: 2px solid var(--pre-border-left-color);
+    padding: 0.2em;
+    background-color: var(--code-background-color);
     border-radius: 3px;
+    font-size: 1.1em;
 }
 
 a {
     color: var(--link-color);
     text-decoration: none;
+    }
+nav {
+    text-align: center;
+}
+
+nav > a {
+    color: var(--nav-link-color);
+    font-size: 1.3em;
+}
+
+pre::-webkit-scrollbark {
+    display: none;
+}
+
+pre {
+    margin-top: 0;
+    padding: 1em;
+    border-left: 2px solid var(--pre-border-left-color);
+    border-radius: 0px 3px 3px 3px;
+    background-color: rgb(250, 247, 237);
+    color: rgb(101, 85, 111);
+    font-size: 1.1em;
+    overflow-x: scroll;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    --color-namespace: rgb(177, 41, 79);
+    --color-highlight: rgb(51, 118, 187);
+    --color-string:    rgb(46, 141, 109);
+    --color-keyword:   rgb(102, 80, 168);
+}
+
+span.pre-title {
+    background: whitesmoke;
+    padding: 0.3em;
+    border-radius: 3px 3px 0 0;
+    border-left: 2px solid var(--pre-border-left-color);
+}
+
+pre span.keyword {
+    color: var(--color-keyword);
+}
+
+pre span.symbol[reserved="1"] {
+    color: var(--color-highlight);
+    font-weight: bold;
+}
+
+pre span.symbol[reserved="2"] {
+    color: var(--color-highlight);
+}
+
+pre span.string {
+    color: var(--color-string);
+}
+
+pre span.namespace {
+    color: var(--color-namespace);
+    font-weight: bold;
 }

@@ -1,61 +1,61 @@
-<html><head><link href="index.css?461.67308840687815" rel="stylesheet" /><title>Tercio de Melo</title></head><body><div class="layer layer-1"><div class="layer layer-2"><div class="content"><body><div class="header"><h1>Tercio de Melo</h1><nav><a class="current-page" href="/index.html">HOME</a><a href="/about.html">ABOUT</a><a href="/posts.html">POSTS</a><a href="/tags.html">TAGS</a></nav></div><h2>New website!</h2><p>New website is coming along!!</p><p>We now even have multiple paragraphs...</p><h2>No JavaScript</h2><p>This website is made without any javascript.</p><p>Though the website itself is HTML and CSS only, it is generated from clojure code. I have previously used <a href="https://gohugo.io/">Hugo</a> to generate static website, but it is too cumbersome. I wanted something simple, but with powerful features such as hot reloading and custom logic for building the pages.</p><h2>Clojure for the rescue</h2><p>Of course a <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a> would be the best tool for the job, code and data is the same, for being a homoiconic language; and <a href="https://clojure.org/">Clojure</a> is currently my flavor of Lisp.</p><p>Below is a snippet of the clojure code that for now generates this <code>index.html</code> file:</p><pre>(ns main
-  (:gen-class)
-  (:use [hiccup.core])
-  (:require [clojure.java.io :as io]
-            [clojure.core.async :refer [go]]
-            [juxt.dirwatch :refer [watch-dir]]
-            [clojure.string :as string]
-            [dev.server]
-            [components.components :as components]))
+<html><head><link href="index.css?" rel="stylesheet" /><title>Tercio de Melo</title></head><body><body><div class="header"><h1>Tercio de Melo</h1><nav><a class="current-page" href="/index.html">HOME</a><a href="/about.html">ABOUT</a><a href="/posts.html">POSTS</a><a href="/tags.html">TAGS</a></nav></div><h2>New website!</h2><p>New website is coming along!!</p><p>We now even have multiple paragraphs...</p><h2>No JavaScript</h2><p>This website is made without any javascript.</p><p>Though the website itself is HTML and CSS only, it is generated from clojure code. I have previously used <a href="https://gohugo.io/">Hugo</a> to generate static website, but it is too cumbersome. I wanted something simple, but with powerful features such as hot reloading and custom logic for building the pages.</p><h2>Clojure for the rescue</h2><p>Of course a <a href="https://pt.wikipedia.org/wiki/Lisp">Lisp</a> would be the best tool for the job, code and data is the same, for being a homoiconic language; and <a href="https://clojure.org/">Clojure</a> is currently my flavor of Lisp.</p><p>Below is a snippet of the clojure code that for now generates this <code>index.html</code> file:</p><div><span class="pre-title">src/main.clj</span><pre><span class="paren">(</span><span class="symbol" reserved="1">ns</span> <span class="symbol">main</span>
+  <span class="paren">(</span><span class="keyword">:gen-class</span><span class="paren">)</span>
+  <span class="paren">(</span><span class="keyword">:use</span> <span class="paren">[</span><span class="symbol">hiccup.core</span><span class="paren">])</span>
+  <span class="paren">(</span><span class="keyword">:require</span> <span class="paren">[</span><span class="symbol">clojure.java.io</span> <span class="keyword">:as</span> <span class="symbol">io</span><span class="paren">]</span>
+            <span class="paren">[</span><span class="symbol">clojure.core.async</span> <span class="keyword">:refer</span> <span class="paren">[</span><span class="symbol" reserved="1">go</span><span class="paren">]]</span>
+            <span class="paren">[</span><span class="symbol">juxt.dirwatch</span> <span class="keyword">:refer</span> <span class="paren">[</span><span class="symbol">watch-dir</span><span class="paren">]]</span>
+            <span class="paren">[</span><span class="symbol">clojure.string</span> <span class="keyword">:as</span> <span class="symbol">string</span><span class="paren">]</span>
+            <span class="paren">[</span><span class="symbol">dev.server</span><span class="paren">]</span>
+            <span class="paren">[</span><span class="symbol">components.components</span> <span class="keyword">:as</span> <span class="symbol">components</span><span class="paren">]))</span>
 
-(defn head [should-refresh]
-  [:head
-   [:link {:rel "stylesheet" :href (str "index.css")}]
-   [:title "Tercio de Melo"]
-   (if should-refresh
-     [:meta {:http-equiv "refresh"  :content "2"}])])
+<span class="paren">(</span><span class="symbol" reserved="1">defn</span> <span class="symbol">head</span> <span class="paren">[</span><span class="symbol">should-refresh</span><span class="paren">]</span>
+  <span class="paren">[</span><span class="keyword">:head</span>
+   <span class="paren">[</span><span class="keyword">:link</span> <span class="paren">{</span><span class="keyword">:rel</span> <span class="string">"stylesheet"</span> <span class="keyword">:href</span> <span class="paren">(</span><span class="symbol" reserved="2">str</span> <span class="string">"index.css?"</span> <span class="paren">(</span><span class="symbol" reserved="1">if</span> <span class="symbol">should-refresh</span> <span class="paren">(</span><span class="symbol">rand</span> <span class="symbol">1000</span><span class="paren">)))}]</span>
+   <span class="paren">[</span><span class="keyword">:title</span> <span class="string">"Tercio de Melo"</span><span class="paren">]</span>
+   <span class="paren">(</span><span class="symbol" reserved="1">if</span> <span class="symbol">should-refresh</span>
+     <span class="paren">[</span><span class="keyword">:meta</span> <span class="paren">{</span><span class="keyword">:http-equiv</span> <span class="string">"refresh"</span>  <span class="keyword">:content</span> <span class="string">"2"</span><span class="paren">}])])</span>
 
-(defn body [page]
-  (let [module  (symbol (str "pages." page))
-        content (symbol (str module "/content"))]
-    (require module)
-    [:body
-     (components/header page)
-     ((resolve content))]))
+<span class="paren">(</span><span class="symbol" reserved="1">defn</span> <span class="symbol">body</span> <span class="paren">[</span><span class="symbol">page</span><span class="paren">]</span>
+  <span class="paren">(</span><span class="symbol" reserved="1">let</span> <span class="paren">[</span><span class="symbol">module</span>  <span class="paren">(</span><span class="symbol">symbol</span> <span class="paren">(</span><span class="symbol" reserved="2">str</span> <span class="string">"pages."</span> <span class="symbol">page</span><span class="paren">))</span>
+        <span class="symbol">content</span> <span class="paren">(</span><span class="symbol">symbol</span> <span class="paren">(</span><span class="symbol" reserved="2">str</span> <span class="symbol">module</span> <span class="string">"/content"</span><span class="paren">))]</span>
+    <span class="paren">(</span><span class="symbol" reserved="2">require</span> <span class="symbol">module</span><span class="paren">)</span>
+    <span class="paren">[</span><span class="keyword">:body</span>
+     <span class="paren">(</span><span class="namespace">components</span><span class="symbol">/header</span> <span class="symbol">page</span><span class="paren">)</span>
+     <span class="paren">((</span><span class="symbol" reserved="2">resolve</span> <span class="symbol">content</span><span class="paren">))]))</span>
 
-(defn pages [base-dir]
-  (let [directory (io/file (str base-dir "/src/pages"))]
-    (->> (.list directory)
-         (filter #(string/ends-with? % ".clj"))
-         (map #(string/replace % #"\.clj$" ""))
-         vec)))
+<span class="paren">(</span><span class="symbol" reserved="1">defn</span> <span class="symbol">pages</span> <span class="paren">[</span><span class="symbol">base-dir</span><span class="paren">]</span>
+  <span class="paren">(</span><span class="symbol" reserved="1">let</span> <span class="paren">[</span><span class="symbol">directory</span> <span class="paren">(</span><span class="namespace">io</span><span class="symbol">/file</span> <span class="paren">(</span><span class="symbol" reserved="2">str</span> <span class="symbol">base-dir</span> <span class="string">"/src/pages"</span><span class="paren">))]</span>
+    <span class="paren">(</span><span class="symbol" reserved="1">->></span> <span class="paren">(</span><span class="symbol">.list</span> <span class="symbol">directory</span><span class="paren">)</span>
+         <span class="paren">(</span><span class="symbol" reserved="2">filter</span> <span class="paren">#(</span><span class="namespace">string</span><span class="symbol">/ends-with?</span> <span class="symbol">%</span> <span class="string">".clj"</span><span class="paren">))</span>
+         <span class="paren">(</span><span class="symbol" reserved="2">map</span> <span class="paren">#(</span><span class="namespace">string</span><span class="symbol">/replace</span> <span class="symbol">%</span> <span class="paren">#</span><span class="string">"\.clj$"</span> <span class="string">""</span><span class="paren">))</span>
+         <span class="symbol">vec</span><span class="paren">)))</span>
 
-(defn -main [& args]
-  (doseq [page (pages (System/getProperty "user.dir"))]
-    (let [output-file (str "tercio.com.br/" page ".html")
-          sysargs     (set args)
-          is-dev-env  (contains? sysargs "--environment=dev")]
-      (println "Generating " output-file)
-      (with-open [wtr (io/writer output-file)]
-        (.write wtr (html [:html (head is-dev-env)
-                           [:body (body page)]]))))))
+<span class="paren">(</span><span class="symbol" reserved="1">defn</span> <span class="symbol">-main</span> <span class="paren">[</span><span class="symbol">&</span> <span class="symbol">args</span><span class="paren">]</span>
+  <span class="paren">(</span><span class="symbol" reserved="1">doseq</span> <span class="paren">[</span><span class="symbol">page</span> <span class="paren">(</span><span class="symbol">pages</span> <span class="paren">(</span><span class="namespace">System</span><span class="symbol">/getProperty</span> <span class="string">"user.dir"</span><span class="paren">))]</span>
+    <span class="paren">(</span><span class="symbol" reserved="1">let</span> <span class="paren">[</span><span class="symbol">output-file</span> <span class="paren">(</span><span class="symbol" reserved="2">str</span> <span class="string">"tercio.com.br/"</span> <span class="symbol">page</span> <span class="string">".html"</span><span class="paren">)</span>
+          <span class="symbol">sysargs</span>     <span class="paren">(</span><span class="symbol" reserved="2">set</span> <span class="symbol">args</span><span class="paren">)</span>
+          <span class="symbol">is-dev-env</span>  <span class="paren">(</span><span class="symbol" reserved="2">contains?</span> <span class="symbol">sysargs</span> <span class="string">"--environment=dev"</span><span class="paren">)]</span>
+      <span class="paren">(</span><span class="symbol" reserved="2">println</span> <span class="string">"Generating "</span> <span class="symbol">output-file</span><span class="paren">)</span>
+      <span class="paren">(</span><span class="symbol" reserved="1">with-open</span> <span class="paren">[</span><span class="symbol">wtr</span> <span class="paren">(</span><span class="namespace">io</span><span class="symbol">/writer</span> <span class="symbol">output-file</span><span class="paren">)]</span>
+        <span class="paren">(</span><span class="symbol">.write</span> <span class="symbol">wtr</span> <span class="paren">(</span><span class="symbol">html</span> <span class="paren">[</span><span class="keyword">:html</span> <span class="paren">(</span><span class="symbol">head</span> <span class="symbol">is-dev-env</span><span class="paren">)</span>
+                           <span class="paren">[</span><span class="keyword">:body</span> <span class="paren">(</span><span class="symbol">body</span> <span class="symbol">page</span><span class="paren">)]]))))))</span>
 
-(defn watch-in-cider []
-  (let [class-path (System/getProperty "java.class.path")]
-    (if (.contains class-path "/cider-nrepl/")
-      (do
-        (println "Starting dev server on port 8000")
-        (go (dev.server/start 8000))
+<span class="paren">(</span><span class="symbol" reserved="1">defn</span> <span class="symbol">watch-in-cider</span> <span class="paren">[]</span>
+  <span class="paren">(</span><span class="symbol" reserved="1">let</span> <span class="paren">[</span><span class="symbol">class-path</span> <span class="paren">(</span><span class="namespace">System</span><span class="symbol">/getProperty</span> <span class="string">"java.class.path"</span><span class="paren">)]</span>
+    <span class="paren">(</span><span class="symbol" reserved="1">if</span> <span class="paren">(</span><span class="symbol">.contains</span> <span class="symbol">class-path</span> <span class="string">"/cider-nrepl/"</span><span class="paren">)</span>
+      <span class="paren">(</span><span class="symbol" reserved="1">do</span>
+        <span class="paren">(</span><span class="symbol" reserved="2">println</span> <span class="string">"Starting dev server on port 8000"</span><span class="paren">)</span>
+        <span class="paren">(</span><span class="symbol" reserved="1">go</span> <span class="paren">(</span><span class="namespace">dev.server</span><span class="symbol">/start</span> <span class="symbol">8000</span><span class="paren">))</span>
 
-        (println "Watching page changes")
-        (watch-dir
-         (fn [& _] (-main "--environment=dev"))
-         (io/file "src/pages")
-         (io/file "src/components")
-         (io/file "src/posts"))))))
+        <span class="paren">(</span><span class="symbol" reserved="2">println</span> <span class="string">"Watching page changes"</span><span class="paren">)</span>
+        <span class="paren">(</span><span class="symbol">watch-dir</span>
+         <span class="paren">(</span><span class="symbol" reserved="1">fn</span> <span class="paren">[</span><span class="symbol">&</span> <span class="symbol">_</span><span class="paren">]</span> <span class="paren">(</span><span class="symbol">-main</span> <span class="string">"--environment=dev"</span><span class="paren">))</span>
+         <span class="paren">(</span><span class="namespace">io</span><span class="symbol">/file</span> <span class="string">"src/pages"</span><span class="paren">)</span>
+         <span class="paren">(</span><span class="namespace">io</span><span class="symbol">/file</span> <span class="string">"src/components"</span><span class="paren">)</span>
+         <span class="paren">(</span><span class="namespace">io</span><span class="symbol">/file</span> <span class="string">"src/posts"</span><span class="paren">))))))</span>
 
-(comment (watch-in-cider))
-(comment (-main))
-(comment (-main "--environment=dev"))
-(comment (dev.server/start 8000))
-</pre><p>The <code>&lt;meta ...&gt;</code> tag triggers refresh every too second. And every time I save a file, say <code>src/pages/index.clj</code>, in <a href="https://www.gnu.org/software/emacs/">Emacs</a> then <a href="https://github.com/clojure-emacs/cider">CIDER</a> automatically creates a new <code>index.html</code>. Notice that I'm using <a href="https://github.com/juxt/dirwatch">juxt.dirwatch</a> to watch page changes locally. This watch is executed only when CIDER is in the class path, which doesn't happen when we run it with a <code>lein run</code>, for example.</p><p>Who already had some contact with <a href="https://clojurescript.org/">ClojureScript</a> might have noticed that I leverage <a href="https://github.com/weavejester/hiccup">Hiccup</a> to generate HTML from Clojure data structures. It is a really fun and powerful tool.</p><p>If you are interested in seing the details, you will find the code in <a href="https://github.com/terciodemelo/terciodemelo.github.io">GitHub</a>. This website is hosted in <a href="https://pages.github.com/">GitHub Pages</a>.</p></body></div></div></div></body></html>
+<span class="paren">(</span><span class="symbol" reserved="2">comment</span> <span class="paren">(</span><span class="symbol">watch-in-cider</span><span class="paren">))</span>
+<span class="paren">(</span><span class="symbol" reserved="2">comment</span> <span class="paren">(</span><span class="symbol">-main</span><span class="paren">))</span>
+<span class="paren">(</span><span class="symbol" reserved="2">comment</span> <span class="paren">(</span><span class="symbol">-main</span> <span class="string">"--environment=dev"</span><span class="paren">))</span>
+<span class="paren">(</span><span class="symbol" reserved="2">comment</span> <span class="paren">(</span><span class="namespace">dev.server</span><span class="symbol">/start</span> <span class="symbol">8000</span><span class="paren">))</span>
+</pre></div><p>The <code>&lt;meta ...&gt;</code> tag triggers refresh every too second. And every time I save a file, say <code>src/pages/index.clj</code>, in <a href="https://www.gnu.org/software/emacs/">Emacs</a> then <a href="https://github.com/clojure-emacs/cider">CIDER</a> automatically creates a new <code>index.html</code>. Notice that I'm using <a href="https://github.com/juxt/dirwatch">juxt.dirwatch</a> to watch page changes locally. This watch is executed only when CIDER is in the class path, which doesn't happen when we run it with a <code>lein run</code>, for example.</p><p>Who already had some contact with <a href="https://clojurescript.org/">ClojureScript</a> might have noticed that I leverage <a href="https://github.com/weavejester/hiccup">Hiccup</a> to generate HTML from Clojure data structures. It is a really fun and powerful tool.</p><p>If you are interested in seing the details, you will find the code in <a href="https://github.com/terciodemelo/terciodemelo.github.io">GitHub</a>. This website is hosted in <a href="https://pages.github.com/">GitHub Pages</a>.</p></body></body></html>

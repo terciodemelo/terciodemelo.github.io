@@ -1,4 +1,6 @@
-(ns pages.index)
+(ns pages.index
+  (:gen-class)
+  (:require [parses.clojure :as parse]))
 
 (defn content []
   (list [:h2 "New website!"]
@@ -32,7 +34,9 @@
          [:code "index.html"]
          " file:"]
         
-        [:pre (slurp "src/main.clj")]
+        [:div
+         [:span.pre-title "src/main.clj"]
+         [:pre (parse/to-html (slurp "src/main.clj"))]]
         
         [:p
          "The " [:code "&lt;meta ...&gt;"] " tag triggers refresh every too second. "

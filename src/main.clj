@@ -10,7 +10,7 @@
 
 (defn head [should-refresh]
   [:head
-   [:link {:rel "stylesheet" :href (str "index.css")}]
+   [:link {:rel "stylesheet" :href (str "index.css?" (if should-refresh (rand 1000)))}]
    [:title "Tercio de Melo"]
    (if should-refresh
      [:meta {:http-equiv "refresh"  :content "2"}])])
