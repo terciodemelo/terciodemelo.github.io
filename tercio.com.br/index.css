@@ -96,7 +96,7 @@ nav > a {
     font-size: 1.3em;
 }
 
-pre::-webkit-scrollbark {
+pre::-webkit-scrollbar {
     display: none;
 }
 
@@ -121,6 +121,7 @@ pre {
 }
 
 .pre-title {
+    position: relative;
     background: whitesmoke;
     color: rgb(101, 85, 111);
     padding: 0.3em;
