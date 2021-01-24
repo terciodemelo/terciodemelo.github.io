@@ -98,6 +98,7 @@ pre::-webkit-scrollbark {
 pre {
     margin-top: 0;
     padding: 1em;
+    border: 1px solid;
     border-left: 2px solid var(--pre-border-left-color);
     border-radius: 0px 3px 3px 3px;
     background-color: rgb(250, 247, 237);
@@ -118,6 +119,8 @@ span.pre-title {
     background: whitesmoke;
     padding: 0.3em;
     border-radius: 3px 3px 0 0;
+    border-top: 1px solid;
+    border-right: 1px solid;
     border-left: 2px solid var(--pre-border-left-color);
 }
 
