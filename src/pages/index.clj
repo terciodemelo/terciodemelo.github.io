@@ -35,7 +35,9 @@
          " file:"]
         
         [:div
-         [:span.pre-title "src/main.clj"]
+         [:a.pre-title
+          {:href "https://github.com/terciodemelo/terciodemelo.github.io/blob/master/src/main.clj"
+           :target "_blank"} "src/main.clj"]
          [:pre (parse/to-html (slurp "src/main.clj"))]]
         
         [:p

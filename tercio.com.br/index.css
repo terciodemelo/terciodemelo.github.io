@@ -81,7 +81,12 @@ code {
 a {
     color: var(--link-color);
     text-decoration: none;
-    }
+}
+
+a:hover, a:active, a:focus {
+    outline: 0;
+}
+
 nav {
     text-align: center;
 }
@@ -115,8 +120,9 @@ pre {
     --color-keyword:   rgb(102, 80, 168);
 }
 
-span.pre-title {
+.pre-title {
     background: whitesmoke;
+    color: rgb(101, 85, 111);
     padding: 0.3em;
     border-radius: 3px 3px 0 0;
     border-top: 1px solid;
