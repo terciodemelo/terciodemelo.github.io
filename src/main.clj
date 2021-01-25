@@ -12,6 +12,7 @@
   [:head
    [:link {:rel "stylesheet" :href (str "index.css?" (if should-refresh (rand 1000)))}]
    [:title "Tercio de Melo"]
+   [:meta {:http-equiv "Content-Type" :content "text/html;charset=utf8"}]
    (if should-refresh
      [:meta {:http-equiv "refresh"  :content "2"}])])
 
