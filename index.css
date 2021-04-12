@@ -49,7 +49,7 @@ body {
     margin: auto;
     display: grid;
     width: max-content;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1em;
 }
 
@@ -67,7 +67,7 @@ h1, h2, strong {
     color: var(--title-color);
 }
 
-p {
+p, table {
     text-align: justify;
 }
 
@@ -151,4 +151,69 @@ pre span.string {
 pre span.namespace {
     color: var(--color-namespace);
     font-weight: bold;
+}
+
+div.resume > div.heading > h1,
+div.resume > div.heading > p.location {
+    margin: 0;
+}
+
+div.resume  div.experience {
+    padding-top: 1em;
+}
+
+div.resume div.experience > div.workplace {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.resume div.experience span.company {
+    color: var(--link-color);
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+div.resume div.experience .title {
+    color: var(--title-color);
+    font-weight: normal;
+    margin-top: 0;
+}
+
+div.resume div.experience .period {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+div.resume div.experience > ul > li {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+div.resume table.education td > span {
+    font-weight: normal;
+}
+
+div.resume table.education td {
+    vertical-align: top;
+}
+
+div.resume table.education td:nth-child(2) {
+    width: 10ch;
+}
+
+div.resume table.education td:nth-child(3) {
+    width: 18ch;
+}
+
+div.resume table.education td:nth-child(3) > h2 {
+    margin-bottom: 1.4em;
+}
+
+div.resume table.education td:nth-child(3) > span {
+    white-space: pre;
+}
+
+div.resume table.education td:nth-child(3) > span:nth-child(3n - 1) {
+    color: var(--title-color);
 }
