@@ -13,7 +13,7 @@
     {:href (:href page)}))
 
 (defn header [current-page]
-  (if (not= current-page "resume")
+  (if (not= current-page "resume_pdf")
     [:div.header
      [:h1 "Tercio de Melo"]
      [:nav (for [page pages]

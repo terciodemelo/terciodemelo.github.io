@@ -17,7 +17,7 @@
      [:meta {:http-equiv "refresh"  :content "2"}])])
 
 (defn body [page]
-  (let [module  (symbol (str "pages." page))
+  (let [module  (symbol (str "pages." (string/replace page "_" "-")))
         content (symbol (str module "/content"))]
     (require module)
     [:body
@@ -38,8 +38,8 @@
           is-dev-env  (contains? sysargs "--environment=dev")]
       (println "Generating " output-file)
       (with-open [wtr (io/writer output-file)]
-        (.write wtr (html [:html (head is-dev-env)
-                           [:body (body page)]]))))))
+        (.write wtr (html {:mode :html} [:html (head is-dev-env)
+                                         [:body (body page)]]))))))
 
 (defn watch-in-cider []
   (let [class-path (System/getProperty "java.class.path")]

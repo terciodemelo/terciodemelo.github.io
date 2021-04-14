@@ -7,6 +7,7 @@
     --pre-border-left-color: #69c;
     --link-color: rgb(2, 155, 247);
     --nav-link-color: #e81c4f;
+    --download-color: rgb(224, 41, 79);
 }
 
 body {
@@ -216,4 +217,26 @@ div.resume table.education td:nth-child(3) > span {
 
 div.resume table.education td:nth-child(3) > span:nth-child(3n - 1) {
     color: var(--title-color);
+}
+
+div.pruned-resume {
+    padding-top: 3em;
+}
+
+div.pruned-resume div.resume > div.heading > h1 {
+    display: none;
+}
+
+div.pruned-resume > table.heading {
+    width: 100%;
+}
+
+div.pruned-resume > table.heading tr > td:nth-child(2) > * {
+    display: block;
+    text-align: right;
+}
+
+a.download {
+    color: var(--download-color);
+    text-decoration: underline;
 }
