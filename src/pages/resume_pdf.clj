@@ -5,7 +5,7 @@
    [:div.heading
     [:h1 "Tercio de Melo"]
     [:a {:href "mailto:contact@tercio.com.br"} "contact@tercio.com.br"]
-    [:p.location "São Paulo - Brazil"]]
+    [:p.location "Berlin - Germany"]]
    
    [:h2 "LONG STORY SHORT"]
    [:p
@@ -21,9 +21,13 @@
     [:a {:href "https://amazon.com.br/"} "Amazon.com.br"]
     " and building a serverless technology at the unicorn "
     [:a {:href "https://vtex.com/"} "VTEX"]
-    " called VTEX IO. Now I am working at the Data division of the booming banking unicorn "
+    " called VTEX IO. Then while I was working at the Data division of "
     [:a {:href "https://nubank.com.br/"} "Nubank"]
-    "."]
+    " I and my wife decided that we should move to Berlin to build our family, "
+    "which brought me to "
+    [:a {:href "https://sumup.com/"} "SumUp"]
+    ", where I'm focusing on the DataOps side of things, in a similar role to that"
+    " I had taken at Nubank."]
 
    [:table.education
     [:tr
@@ -52,11 +56,22 @@
    
    
    [:h2 "EXPERIENCE"]
+
+   [:div.experience
+    [:div.workplace
+     [:span.company "SumUp, Berlin"]
+     [:span.period "August 2021 - PRESENT"]]
+    [:p.title "Senior DevOps Engineer"]
+    [:ul
+     [:li "Focus on DataOps with automation, monitoring, and design of reproduceable data environments"]
+     [:li "Maintenance of BI platform infrastructure"]
+     [:li "Planning and execution of services migration from legacy to new Infrastructures"]]]
+   
    [:div.experience
     [:div.workplace
      [:span.company "Nubank, São Paulo"]
-     [:span.period "December 2020 - PRESENT"]]
-    [:p.title "Systems Engineer"]
+     [:span.period "December 2020 - July 2021"]]
+    [:p.title "Senior Systems Engineer"]
     [:ul
      [:li "Working on cost reduction for data transfer between different cloud providers"]
      [:li "Working on enhancing granular access control for many different clearance levels"]]]
@@ -65,17 +80,17 @@
     [:div.workplace
      [:span.company "Loggi, São Paulo"]
      [:span.period "July 2020 - October 2020"]]
-    [:p.title "Site Reliabity Engineer"]
+    [:p.title "Senior Site Reliabity Engineer"]
     [:ul
      [:li "Dev tool for managing services releases"]
-     [:li "Services migration from Azure VMs to Kubernetes clusters in Azure and AWS"]
+     [:li "Services migration and mirroring between Azure and AWS"]
      [:li "CI/CD pipeline assemble for Blue-Green deployment in different infrastructures"]]]
 
    [:div.experience
     [:div.workplace
      [:span.company "VTEX, Rio de Janeiro"]
      [:span.period "September 2018 - July 2020"]]
-    [:p.title "Site Reliabity Engineer & Software Engineer"]
+    [:p.title "Senior Site Reliabity & Software Engineer"]
     [:ul
      [:li "Load testing platform on top of Kubernetes"]
      [:li "Automation of Kubernetes, IaC, Deployments with Rancher, Terraform, and CD/CD pipelines"]
